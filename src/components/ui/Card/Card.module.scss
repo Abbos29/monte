@@ -1,0 +1,123 @@
+.card {
+    min-height: 600px;
+    // background-image: url(/card-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 40px;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+    position: relative;
+
+    transition: box-shadow .4s;
+
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.0) inset;
+
+    &:hover {
+
+        box-shadow: 0px 0px 200px 50px rgba(0, 0, 0, 0.6) inset;
+        .card_box {
+            bottom: 0;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    /* .card_top */
+    &_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+
+        h4 {
+            max-width: 300px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        button {
+            min-width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+    }
+    /* .card_box */
+    &_box {
+        margin-top: auto;
+
+        position: absolute;
+        width: 100%;
+        left: 0;
+        
+        padding: 40px;
+        
+        transition: all .6s;
+        
+        bottom: -100%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    /* .card_location */
+    &_location {
+        padding: 12px;
+        border-radius: 16px;
+        background-color: #d5e7ee;
+
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        width: max-content;
+
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 20px;
+        }
+
+        p {
+            color: #2e2f30;
+        }
+    }
+    /* .card_grid */
+    &_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 4px;
+
+       
+    }
+    /* .card_item */
+    &_item {
+        padding: 12px;
+        border-radius: 16px;
+        background-color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        p {
+            color: #2e2f30;
+            opacity: 0.5;
+            font-size: 12px;
+        }
+
+        b {
+            font-size: 14px;
+            color: #2e2f30;
+        }
+    }
+}

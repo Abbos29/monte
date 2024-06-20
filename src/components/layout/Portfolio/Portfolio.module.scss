@@ -1,0 +1,116 @@
+.portfolio {
+    background-color: #232323;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.top {
+    display: flex;
+    // align-items: center;
+    align-items: start;
+    gap: 15px;
+    justify-content: space-between;
+
+    h2 {
+        font-size: clamp(1.875rem, 1.318rem + 2.41vw, 3.125rem);
+
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 40px;
+    }
+}
+.btns {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 4px;
+    border-radius: 8px;
+    display: flex;
+    gap: 4px;
+
+    button {
+        font-size: 16px;
+        padding: 14px 16px;
+        border-radius: 8px;
+        background-color: transparent;
+        color: #fff;
+
+        white-space: nowrap;
+
+        transition: all 0.3s;
+
+        &.active {
+            background-color: #fff;
+            color: #000;
+            &:hover {
+                background-color: #fff;
+            }
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 40px;
+
+    margin-top: 80px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px 20px;
+    align-items: center;
+    margin-top: 80px;
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+}
+
+.all_btn {
+    background-color: #D5E7EE;
+    padding: 12px 20px;
+    border-radius: 80px;
+    display: block;
+    width: max-content;
+    color: #232323;
+    margin: 0 auto;
+}
+
+.bottom_btns {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    p{
+        max-width: 200px;
+        font-size: 14px;
+        line-height: 1.2;
+        margin-right: 20px;
+    }
+
+    a {
+        min-width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+    }
+}
